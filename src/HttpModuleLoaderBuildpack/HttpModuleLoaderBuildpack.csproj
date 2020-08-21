@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net472</TargetFrameworks>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <RootNamespace>HttpModuleLoaderBuildpack</RootNamespace>
+    <AssemblyName>buildpack</AssemblyName>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandDotNet" Version="3.0.2" />
+    <PackageReference Include="Nuke.Common" Version="0.24.11" />
+  </ItemGroup>
+    
+</Project>
