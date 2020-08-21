@@ -115,7 +115,7 @@ class Build : NukeBuild
                 var buildpackProject = Solution.GetProject(BuildpackProjectName);
                 if(buildpackProject == null)
                     throw new Exception($"Unable to find project called {BuildpackProjectName} in solution {Solution.Name}");
-                var publishDirectory = buildpackProject.Directory / "bin" / Configuration / framework / runtime / "publish";
+                var publishDirectory = buildpackProject.Directory / "bin" / Configuration / runtime / "publish";
                 var workBinDirectory = workDirectory / "bin";
 
 
@@ -228,7 +228,7 @@ class Build : NukeBuild
         .Executes(() =>
         {
             var home = (AbsolutePath)Path.GetTempPath() / Guid.NewGuid().ToString();
-            var app = RootDirectory / "test" / "app";
+            var app = home / "app";
             var deps = RootDirectory / "test" / "deps";
             var index = 1;
             var cache = home / "cache";
@@ -236,7 +236,7 @@ class Build : NukeBuild
 
             DotNetRun(s => s
                 .SetProjectFile(Solution.GetProject("Lifecycle.Supply").Path)
-                .SetApplicationArguments($"{app} {cache} {app} {deps} {index}")
+                .SetApplicationArguments($"{app} {cache} {deps} {index}")
                 .SetConfiguration(Configuration)
                 .SetFramework("net472"));
             Logger.Block($"Buildpack applied. Droplet is available in {home}");

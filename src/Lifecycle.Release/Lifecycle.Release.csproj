@@ -2,7 +2,8 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>netcoreapp3.1;net472</TargetFrameworks>
+        <TargetFramework>net472</TargetFramework>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
         <AssemblyName>release</AssemblyName>
     </PropertyGroup>
 

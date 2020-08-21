@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net472</TargetFrameworks>
-    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
-    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <TargetFramework>net472</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <RootNamespace>HttpModuleLoaderBuildpack</RootNamespace>
     <AssemblyName>buildpack</AssemblyName>
     <OutputType>Exe</OutputType>

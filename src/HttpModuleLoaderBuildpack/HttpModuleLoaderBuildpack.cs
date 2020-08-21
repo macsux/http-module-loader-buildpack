@@ -24,7 +24,7 @@ namespace HttpModuleLoaderBuildpack
                 }
                 FileSystemTasks.CopyDirectoryRecursively(buildpackDir, Path.Combine(buildPath, "bin"), DirectoryExistsPolicy.Merge, FileExistsPolicy.Skip);
                 var moduleAssemblyFilename = File.ReadAllText(httpModuleBuildpackManifest);
-                var moduleAssembly = Assembly.Load(moduleAssemblyFilename);
+                var moduleAssembly = Assembly.LoadFile(Path.Combine(buildPath, "bin", moduleAssemblyFilename));
                 var httpModuleTypes = moduleAssembly.ExportedTypes.Where(x => typeof(IHttpModule).IsAssignableFrom(x));
 
                 var doc = new XmlDocument();
