@@ -10,7 +10,7 @@ applications:
 - name: simpleapp
   stack: windows
   buildpacks: 
-    - https://github.com/macsux/http-module-loader-buildpack/releases/download/v0.1.0/HttpModuleLoaderBuildpack-win-x64-0.1.0.zip
+    - https://github.com/macsux/aspnet-logging-buildpack/releases/download/v0.1.0/AspNetLoggingBuildpack-win-x64-0.1.0.zip
     - https://github.com/macsux/http-module-loader-buildpack/releases/download/v0.1.0/HttpModuleLoaderBuildpack-win-x64-0.1.0.zip
     - hwc_buildpack
 ```
